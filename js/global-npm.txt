@@ -1,0 +1,14 @@
+bower
+eslint
+eslint-config-airbnb
+eslint-config-google
+eslint-plugin-react
+grunt-cli
+gulp
+jscs
+jshint
+node-debug
+npm
+npm-check-updates
+tslint
+typescript

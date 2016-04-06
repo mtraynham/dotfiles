@@ -1,0 +1,12 @@
+awscli
+ipython[all]
+matplotlib
+numpy
+pandas
+pip
+requests
+scipy
+setuptools
+thefuck
+virtualenv
+wheel
