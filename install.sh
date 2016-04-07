@@ -1,26 +1,19 @@
 #!/usr/bin/env bash
 
 # OS Specific packages
+cp -rs config/* $HOME/
 if [ "$(uname)" == "Darwin" ]; then
-    ./install.ubuntu.sh
+    ./install.osx.sh
+    cp -rs config.osx/* $HOME/
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     ./install.ubuntu.sh
+    cp -rs config.ubuntu/* $HOME/
 fi
 
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Rbenv
-git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
-cd $HOME/.rbenv && src/configure && make -C src
-git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
-
-# Pyenv
-git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
-
-# NVM
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-
+# Source updated files
 [ -e "${HOME}/.zshenv" ] && source "${HOME}/.zshenv"
 [ -e "${HOME}/.zprofile" ] && source "${HOME}/.zprofile"
 [ -e "${HOME}/.zshrc" ] && source "${HOME}/.zshrc"

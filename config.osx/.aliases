@@ -1,0 +1,8 @@
+# Use MacVim instead of Vim
+alias vim='mvim -v'
+# Use brew svn
+alias svn='/usr/local/bin/svn'
+# Use brew git
+alias git='/usr/local/bin/git'
+# Remove all SVN un-versioned files
+alias svn-clean='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= read -r f; do rm -rf "$f"; done'

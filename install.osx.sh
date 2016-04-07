@@ -12,10 +12,16 @@ brew install brew-cask
 # ZSH
 brew install zsh
 chsh -s `which zsh`
+# Copy SSH Id
+brew install copy-ssh-id
 # Subversion
 brew install subversion
 # Git
 brew install git
+# Tig
+brew install tig
+# Hub
+brew install hub
 # Vim
 brew install macvim
 # JDK 8
@@ -24,10 +30,19 @@ brew cask install java
 brew install maven
 # Gradle
 brew install gradle
-# Wget
-brew install  wget
+# NVM
+brew install nvm
+# Pyenv
+brew install pyenv
+# Rbenv
+brew install rbenv
+brew install ruby-build
 # Irssi
 brew install irssi
+# Wget
+brew install  wget
+# FontConfig
+brew install fontconfig
 # Fortune
 brew install fortune
 # Cowsay
@@ -44,6 +59,22 @@ brew cask install google-chrome
 brew cask install firefox
 # Atom
 brew cask install atom
+# Slack
+brew cask install slack
+# Spotify
+brew cask install spotify
+# Little Snitch
+brew cask install little-snitch
+# IStat Menus
+brew cask install istat-menus
+# Flux
+brew cask install alfred
+# Dropbox
+brew cask install dropbox
+# OpenOffice
+brew cask install openoffice
+# Cyberduck
+brew cask install cyberduck
 
 # For fun R/Hive/Pig/Spark
 brew install gcc
@@ -52,10 +83,6 @@ brew install r
 brew install hive
 brew install pig
 brew install apache-spark
-
-# Copy all config
-cp -R config/* $HOME/
-cp -R config.osx/* $HOME/
 
 # Powerline Fonts
 wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf

@@ -16,11 +16,9 @@ if [ ! -d  "$HOME/.nvm/current" ] ; then
     export NVM_SYMLINK_CURRENT=true
 fi
 export NVM_DIR="$HOME/.nvm"
-export NVM_SYMLINK_CURRENT=true
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # NVM may already be loaded, not sure if this is necssary?
 export PATH=$PATH:$NVM_DIR/current/bin
 
-# THE FUCK
+# TheFuck
 eval "$(thefuck --alias)"
 
 # Source aliases

@@ -1,3 +1,7 @@
 alias pb='curl --data-binary @- http://telepathy/pb'
+# Copy to clipboard
 alias pbcopy='xclip -selection clipboard'
+# Paste from clipboard
 alias pbpaste='xclip -selection clipboard -o'
+# Remove all SVN un-versioned files
+alias svn-clean='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= read -r f; do rm -rf "$f"; done'
