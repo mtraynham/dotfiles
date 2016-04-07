@@ -41,13 +41,17 @@ brew install ruby-build
 # Irssi
 brew install irssi
 # Wget
-brew install  wget
+brew install wget
 # FontConfig
 brew install fontconfig
 # Fortune
 brew install fortune
 # Cowsay
 brew install cowsay
+# Flux
+brew cask install flux
+# Caffeine
+brew cask install caffeine
 # Sublime Text 3
 brew cask install sublime-text3
 # iTerm2
@@ -68,7 +72,9 @@ brew cask install spotify
 brew cask install little-snitch
 # IStat Menus
 brew cask install istat-menus
-# Flux
+# Adium
+brew cask install adium
+# Alfred
 brew cask install alfred
 # Dropbox
 brew cask install dropbox
@@ -76,6 +82,10 @@ brew cask install dropbox
 brew cask install openoffice
 # Cyberduck
 brew cask install cyberduck
+# VLC
+brew cask install vlc
+# The Unarchiver
+brew cask install the-unarchiver
 
 # For fun R/Hive/Pig/Spark
 brew install gcc

@@ -19,7 +19,9 @@ sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) 
 sudo apt-get update
 
 # Base
-sudo apt-get -y install build-essential cmake gfortran libatlas-base-dev python-dev python3-dev
+sudo apt-get -y install make build-essential cmake gfortran libatlas-base-dev python-dev python3-dev \
+    build-essential libssl-dev zlib1g-dev libbz2-dev \
+    libreadline-dev libsqlite3-dev curl llvm libncurses5-dev libncursesw5-dev
 # ZSH
 sudo apt-get -y install zsh
 chsh -s `which zsh`
