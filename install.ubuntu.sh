@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Oracle Java PPA
-sudo apt-get install python-software-properties
+sudo apt-get -y install python-software-properties
 sudo add-apt-repository ppa:webupd8team/java
 # Sublime Text 3 PPA
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
@@ -19,57 +19,57 @@ sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) 
 sudo apt-get update
 
 # Base
-sudo apt-get install build-essential cmake gfortran libatlas-base-dev python-dev python3-dev
+sudo apt-get -y install build-essential cmake gfortran libatlas-base-dev python-dev python3-dev
 # ZSH
-sudo apt-get install zsh
+sudo apt-get -y install zsh
 chsh -s `which zsh`
 # Xclip
-sudo apt-get install xclip
+sudo apt-get -y install xclip
 # Subversion
-sudo apt-get install subversion
+sudo apt-get -y install subversion
 # Git
-sudo apt-get install git
+sudo apt-get -y install git
 # Tig
-sudo apt-get install tig
+sudo apt-get -y install tig
 # Hub
-sudo apt-get install hub
+sudo apt-get -y install hub
 # Vim
-sudo apt-get install vim
+sudo apt-get -y install vim
 # JDK 8
-sudo apt-get install oracle-java8-installer
+sudo apt-get -y install oracle-java8-installer
 # Maven
-sudo apt-get install maven
+sudo apt-get -y install maven
 # Gradle
-sudo apt-get install gradle
+sudo apt-get -y install gradle
 # Irssi
-sudo apt-get install irssi
+sudo apt-get -y install irssi
 # Wget
-sudo apt-get install wget
+sudo apt-get -y install wget
 # Fortune
-sudo apt-get install fortune
+sudo apt-get -y install fortune
 # Cowsay
-sudo apt-get install cowsay
+sudo apt-get -y install cowsay
 # Sublime Text 3
-sudo apt-get install sublime-text-installer
+sudo apt-get -y install sublime-text-installer
 # Terminator
-sudo apt-get install terminator
+sudo apt-get -y install terminator
 # Chrome
-sudo apt-get install google-chrome-stable
+sudo apt-get -y install google-chrome-stable
 # Firefox
-sudo apt-get install firefox
+sudo apt-get -y install firefox
 # Conky
-sudo apt-get install conky
+sudo apt-get -y install conky
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.3-amd64.deb -P /tmp/
-sudo apt-get install /tmp/slack-desktop-2.0.3-amd64.deb
+sudo apt-get -y install /tmp/slack-desktop-2.0.3-amd64.deb
 # Spotify
-sudo apt-get install spotify-client
+sudo apt-get -y install spotify-client
 # Dropbox
-sudo apt-get install nautilus-dropbox
+sudo apt-get -y install nautilus-dropbox
 # Filezilla
-sudo apt-get install filezilla
+sudo apt-get -y install filezilla
 # TMPReaper
-sudo apt-get install tmpreaper
+sudo apt-get -y install tmpreaper
 
 sudo apt-get update
 sudo apt-get upgrade

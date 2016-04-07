@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # OS Specific packages
-cp -rs config/* $HOME/
+cp -rs ${dir}/config/* $HOME/
 if [ "$(uname)" == "Darwin" ]; then
-    ./install.osx.sh
-    cp -rs config.osx/* $HOME/
+    cp -rs ${dir}/config.osx/* $HOME/
+    ${dir}/install.osx.sh
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    ./install.ubuntu.sh
-    cp -rs config.ubuntu/* $HOME/
+    cp -rs ${dir}/config.ubuntu/* $HOME/
+    ${dir}/install.ubuntu.sh
 fi
 
 # Oh My ZSH

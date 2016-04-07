@@ -8,6 +8,7 @@ xcode-select --install
 brew tap homebrew/science
 brew tap caskroom/cask
 brew install brew-cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # ZSH
 brew install zsh
