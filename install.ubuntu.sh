@@ -22,59 +22,37 @@ sudo apt-get update
 sudo apt-get -y install make build-essential cmake gfortran libatlas-base-dev python-dev python3-dev \
     build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev curl llvm libncurses5-dev libncursesw5-dev
-# ZSH
 sudo apt-get -y install zsh
 chsh -s `which zsh`
-# Xclip
 sudo apt-get -y install xclip
-# Subversion
 sudo apt-get -y install subversion
-# Git
 sudo apt-get -y install git
-# Tig
 sudo apt-get -y install tig
-# Hub
 sudo apt-get -y install hub
-# Vim
 sudo apt-get -y install vim
-# JDK 8
 sudo apt-get -y install oracle-java8-installer
-# Maven
 sudo apt-get -y install maven
-# Gradle
 sudo apt-get -y install gradle
-# Irssi
 sudo apt-get -y install irssi
-# Wget
 sudo apt-get -y install wget
-# Fortune
 sudo apt-get -y install fortune
-# Cowsay
 sudo apt-get -y install cowsay
-# Sublime Text 3
 sudo apt-get -y install sublime-text-installer
-# Terminator
 sudo apt-get -y install terminator
-# Chrome
 sudo apt-get -y install google-chrome-stable
-# Firefox
 sudo apt-get -y install firefox
-# Conky
 sudo apt-get -y install conky
-# Slack
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.3-amd64.deb -P /tmp/
-sudo apt-get -y install /tmp/slack-desktop-2.0.3-amd64.deb
-# Spotify
 sudo apt-get -y install spotify-client
-# Dropbox
 sudo apt-get -y install nautilus-dropbox
-# Filezilla
 sudo apt-get -y install filezilla
-# TMPReaper
 sudo apt-get -y install tmpreaper
 
 sudo apt-get update
 sudo apt-get upgrade
+
+# Slack
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.3-amd64.deb -P /tmp/
+sudo apt-get -y install /tmp/slack-desktop-2.0.3-amd64.deb
 
 # Rbenv
 git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
