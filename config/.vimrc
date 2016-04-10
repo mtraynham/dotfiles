@@ -1,6 +1,11 @@
 " ==============================
 " Sensible vim settings
 " ==============================
+let g:ycm_path_to_python_interpreter = '/Users/skitch/.pyenv/shims/python'
+let g:ycm_server_python_interpreter = '/Users/skitch/.pyenv/shims/python'
+set encoding=utf-8
+scriptencoding utf-8
+
 set nocompatible               " Be iMproved
 set autoread                   " Auto reload if file saved externally
 
@@ -19,12 +24,18 @@ set t_Co=256                   " 256 colors terminal
 set ttimeoutlen=50             " Reduce annoying delay for key codes, especially <Esc>..."
 set number                     " Always show line numbers
 set showcmd
+" Turn off beeping
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
 
 set encoding=utf-8
 set term=xterm-256color
-set t_ut=256                   " Disable backgroun color erase, play nicely with tmux
+set t_ut=                      " Disable backgroun color erase, play nicely with tmux
 set termencoding=utf-8
-set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
+" set listchars=tab:│\,trail:•,extends:❯,precedes:❮
+set listchars=tab:│\·,trail:·,eol:¶,precedes:<,extends:>
 
 
 " ================ Turn Off Swap Files ==============
@@ -160,7 +171,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
   let g:airline_theme = 'solarized'
 
-  Plug 'airblade/vim-gitgutter' " Show git diff in the gutter
+Plug 'airblade/vim-gitgutter' " Show git diff in the gutter
 Plug 'tpope/vim-fugitive'
   nnoremap <silent> <leader>gs :Gstatus<CR>
   nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -179,12 +190,13 @@ Plug 'tpope/vim-repeat'
 Plug 'scrooloose/syntastic'
   let g:syntastic_mode_map = {'mode': 'active','active_filetypes': ['js'], 'passive_filetypes': ['html'] }
   let g:syntastic_javascript_checkers = ['jshint']
+  let g:syntastic_jsx_checkers = ['jsxhint']
+  let g:syntastic_jsx_jsxhint_args = ['--babel']
 
 Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
   Plug 'honza/vim-snippets'
   Plug 'anvaka/snip5'
-  let g:ycm_path_to_python_interpreter='/usr/bin/python'
   let g:ycm_complete_in_comments_and_strings=1
   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
   let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
@@ -200,19 +212,19 @@ Plug 'Shougo/unite.vim'
     imap <buffer> <esc> <plug>(unite_exit)
   endfunction
   autocmd FileType unite call s:unite_settings()
-  let g:unite_source_history_yank_enable=1
   nmap <space> [unite]
   nnoremap [unite] <nop>
+  let g:unite_source_history_yank_enable=1
   try
     let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
   catch
   endtry
-  " search a file in the filetree
   nnoremap [unite]<space> :<C-u>Unite -start-insert file_rec/async<cr>
+  nnoremap [unite]r <Plug>(unite_restart)
+  nmap <leader>/ :Ag <c-r>=expand("<cword>")<cr><cr>
   nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
-  nnoremap [unite]/ :Ag <c-r>=expand("<cword>")<cr><cr>
 
 " Javascript goodies
 Plug 'maksimr/vim-jsbeautify', {'for': ['javascript', 'html', 'css']}
@@ -232,6 +244,8 @@ Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
   let g:tern_show_argument_hints = 'on_hold'
   set completeopt-=preview
   autocmd FileType javascript map <buffer> gd :TernDef<CR>
+
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-function'
@@ -254,7 +268,7 @@ endif
 
 " Now that we have plugins loaded, initialize their settings:
 try
-  let g:solarized_termcolors=256
+  let g:solarized_termcolors=16
   let g:solarized_termtrans=1
   set background=dark
   colorscheme solarized
