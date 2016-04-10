@@ -7,7 +7,7 @@ xcode-select --install
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/science
 brew tap caskroom/cask
-brew install brew-cask
+brew tap caskroom/versions
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # ZSH
@@ -48,6 +48,8 @@ brew install fontconfig
 brew install fortune
 # Cowsay
 brew install cowsay
+# Scala
+brew install scala
 # Flux
 brew cask install flux
 # Caffeine
@@ -57,7 +59,8 @@ brew cask install sublime-text3
 # iTerm2
 brew cask install iterm2
 # IntelliJ
-brew cask install intellij-idea
+# brew cask install intellij-idea
+brew cask install intellij-idea-eap
 # Chrome
 brew cask install google-chrome
 # Firefox
@@ -88,8 +91,8 @@ brew cask install vlc
 brew cask install the-unarchiver
 
 # For fun R/Hive/Pig/Spark
+brew cask install xquartz
 brew install gcc
-brew install Caskroom/cask/xquartz
 brew install r
 brew install hive
 brew install pig
