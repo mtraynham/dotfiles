@@ -61,10 +61,3 @@ brew install r
 brew install hive
 brew install pig
 brew install apache-spark
-
-# Powerline Fonts
-wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
-mkdir $HOME/Library/Fonts
-mv PowerlineSymbols.otf $HOME/Library/Fonts
-git clone --depth 1 https://github.com/Lokaltog/powerline-fonts.git $HOME/Library/Fonts/powerline-fonts
-fc-cache -vf $HOME/Library/Fonts

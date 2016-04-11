@@ -67,11 +67,3 @@ git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
 
 # NVM
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-
-# Install Powerline
-wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-mkdir -p $HOME/.fonts/
-mv PowerlineSymbols.otf $HOME/.fonts/
-fc-cache -vf $HOME/.fonts
-mkdir -p $HOME/.config/fontconfig/conf.d/
-mv 10-powerline-symbols.conf $HOME/.config/fontconfig/conf.d/

@@ -18,6 +18,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Powerlevel 9000 theme
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
+# Powerline fonts
+mkdir -p ~/.fonts
+git clone https://github.com/powerline/fonts ~/.fonts/powerline-fonts/
+~/.fonts/powerline-fonts/install.sh
+
+# Awesome Powerline fonts
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/.fonts/awesome-terminal-fonts
+~/.fonts/awesome-terminal-fonts/install.sh
+
 # Source updated files
 [ -e "${HOME}/.zshenv" ] && source "${HOME}/.zshenv"
 [ -e "${HOME}/.zprofile" ] && source "${HOME}/.zprofile"

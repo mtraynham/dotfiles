@@ -1,6 +1,9 @@
 # Debug start up times
 # zmodload zsh/zprof
 
+# Terminal only supports 256 colors
+export TERM="xterm-256color"
+
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
