@@ -5,6 +5,8 @@ sudo apt-get -y install python-software-properties
 sudo add-apt-repository ppa:webupd8team/java
 # Sublime Text 3 PPA
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
+# Atom PPA
+sudo add-apt-repository ppa:webupd8team/atom
 # Git PPA
 sudo add-apt-repository ppa:git-core/ppa
 # Hub PPA
@@ -26,6 +28,7 @@ sudo apt-get -y install zsh
 chsh -s `which zsh`
 sudo apt-get -y install xclip
 sudo apt-get -y install subversion
+sudo apt-get -y install atom
 sudo apt-get -y install git
 sudo apt-get -y install tig
 sudo apt-get -y install hub
