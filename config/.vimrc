@@ -1,8 +1,6 @@
 " ==============================
 " Sensible vim settings
 " ==============================
-let g:ycm_path_to_python_interpreter = '/Users/skitch/.pyenv/shims/python'
-let g:ycm_server_python_interpreter = '/Users/skitch/.pyenv/shims/python'
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -197,6 +195,7 @@ Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
   Plug 'honza/vim-snippets'
   Plug 'anvaka/snip5'
+  let g:ycm_server_python_interpreter='/usr/local/bin/python'
   let g:ycm_complete_in_comments_and_strings=1
   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
   let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
