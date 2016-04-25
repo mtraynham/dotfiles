@@ -22,3 +22,5 @@ fi
 
 # Upgrade oh-my-zsh
 upgrade_oh_my_zsh
+
+

@@ -11,6 +11,8 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository ppa:git-core/ppa
 # Hub PPA
 sudo add-apt-repository ppa:cpick/hub
+# Gradle PPA
+sudo add-apt-repository ppa:cwchien/gradle
 # Spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -34,6 +36,7 @@ sudo apt-get -y install tig
 sudo apt-get -y install hub
 sudo apt-get -y install vim
 sudo apt-get -y install oracle-java8-installer
+sudo apt-get -y install oracle-java8-set-default
 sudo apt-get -y install maven
 sudo apt-get -y install gradle
 sudo apt-get -y install irssi
@@ -45,7 +48,8 @@ sudo apt-get -y install terminator
 sudo apt-get -y install google-chrome-stable
 sudo apt-get -y install firefox
 sudo apt-get -y install conky
-sudo apt-get -y install spotify-client
+sudo apt-get -y install spotify-client-0.9.17
+# sudo apt-get -y install spotify-client  # Broken on Mint 17.3
 sudo apt-get -y install nautilus-dropbox
 sudo apt-get -y install filezilla
 sudo apt-get -y install tmpreaper
@@ -58,12 +62,36 @@ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.3-amd64.d
 sudo apt-get -y install /tmp/slack-desktop-2.0.3-amd64.deb
 
 # Rbenv
-git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
-cd $HOME/.rbenv && src/configure && make -C src
-git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+if [ ! -d "$HOME/.rbenv" ]; then
+    git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
+    cd $HOME/.rbenv && src/configure && make -C src
+    git clone https://github.com/rbenv/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+else
+    cd $HOME/.rbenv && git pull
+    cd $HOME/.rbenv/plugins/ruby-build && git pull
+fi
 
 # Pyenv
-git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
+if [ ! -d "$HOME/.pyenv" ]; then
+    git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
+else
+    cd $HOME/.pyenv && git pull
+fi
 
 # NVM
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+if [ ! -d "$HOME/.nvm" ]; then
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+else
+    cd $HOME/.nvm
+    git fetch --tags
+    TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+    echo "Checking out tag $TAG..."
+    git checkout "$TAG"
+    source $HOME/.nvm/nvm.sh
+fi
+
+# Git-Extras
+if [ ! -d "$HOME/.nvm" ]; then
+    git clone https://github.com/tj/git-extras.git $HOME/.git-extras
+fi
+cd $HOME/.git-extras && sudo make install

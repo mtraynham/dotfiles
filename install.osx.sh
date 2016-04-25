@@ -16,6 +16,7 @@ chsh -s `which zsh`
 brew install copy-ssh-id
 brew install subversion
 brew install git
+brew install git-extras
 brew install tig
 brew install hub
 brew install macvim
