@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Oracle Java PPA
-sudo apt-get -y install python-software-properties
+sudo apt-get --yes --force-yes  install python-software-properties
 sudo add-apt-repository ppa:webupd8team/java
 # Sublime Text 3 PPA
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
@@ -23,43 +23,43 @@ sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) 
 sudo apt-get update
 
 # Base
-sudo apt-get -y install make build-essential cmake gfortran libatlas-base-dev python-dev python3-dev \
+sudo apt-get --yes --force-yes  install make build-essential cmake gfortran libatlas-base-dev python-dev python3-dev \
     build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev curl llvm libncurses5-dev libncursesw5-dev
-sudo apt-get -y install zsh
+sudo apt-get --yes --force-yes  install zsh
 chsh -s `which zsh`
-sudo apt-get -y install xclip
-sudo apt-get -y install subversion
-sudo apt-get -y install atom
-sudo apt-get -y install git
-sudo apt-get -y install tig
-sudo apt-get -y install hub
-sudo apt-get -y install vim
-sudo apt-get -y install oracle-java8-installer
-sudo apt-get -y install oracle-java8-set-default
-sudo apt-get -y install maven
-sudo apt-get -y install gradle
-sudo apt-get -y install irssi
-sudo apt-get -y install wget
-sudo apt-get -y install fortune
-sudo apt-get -y install cowsay
-sudo apt-get -y install sublime-text-installer
-sudo apt-get -y install terminator
-sudo apt-get -y install google-chrome-stable
-sudo apt-get -y install firefox
-sudo apt-get -y install conky
-sudo apt-get -y install spotify-client-0.9.17
-# sudo apt-get -y install spotify-client  # Broken on Mint 17.3
-sudo apt-get -y install nautilus-dropbox
-sudo apt-get -y install filezilla
-sudo apt-get -y install tmpreaper
+sudo apt-get --yes --force-yes  install xclip
+sudo apt-get --yes --force-yes  install subversion
+sudo apt-get --yes --force-yes  install atom
+sudo apt-get --yes --force-yes  install git
+sudo apt-get --yes --force-yes  install tig
+sudo apt-get --yes --force-yes  install hub
+sudo apt-get --yes --force-yes  install vim
+sudo apt-get --yes --force-yes  install oracle-java8-installer
+sudo apt-get --yes --force-yes  install oracle-java8-set-default
+sudo apt-get --yes --force-yes  install maven
+sudo apt-get --yes --force-yes  install gradle
+sudo apt-get --yes --force-yes  install irssi
+sudo apt-get --yes --force-yes  install wget
+sudo apt-get --yes --force-yes  install fortune
+sudo apt-get --yes --force-yes  install cowsay
+sudo apt-get --yes --force-yes  install sublime-text-installer
+sudo apt-get --yes --force-yes  install terminator
+sudo apt-get --yes --force-yes  install google-chrome-stable
+sudo apt-get --yes --force-yes  install firefox
+sudo apt-get --yes --force-yes  install conky
+sudo apt-get --yes --force-yes  install spotify-client-0.9.17
+# sudo apt-get --yes --force-yes  install spotify-client  # Broken on Mint 17.3
+sudo apt-get --yes --force-yes  install nautilus-dropbox
+sudo apt-get --yes --force-yes  install filezilla
+sudo apt-get --yes --force-yes  install tmpreaper
 
 sudo apt-get update
 sudo apt-get upgrade
 
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.3-amd64.deb -P /tmp/
-sudo apt-get -y install /tmp/slack-desktop-2.0.3-amd64.deb
+sudo apt-get --yes --force-yes  install /tmp/slack-desktop-2.0.3-amd64.deb
 
 # Rbenv
 if [ ! -d "$HOME/.rbenv" ]; then
