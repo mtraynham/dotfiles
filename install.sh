@@ -40,13 +40,13 @@ gem install bundler
 
 # Python 2.X
 two_latest=`pyenv install -l | egrep '^[[:space:]]+2\.[[:digit:]]+\.[[:digit:]]+$' | tail -1 | xargs echo`
-pyenv install ${two_latest}
+env PYTHON_CONFIGURE_OPTS="--enable-framework CC=clang" pyenv install ${two_latest}
 pyenv shell ${two_latest}
 pip install -r python/requirements.txt --upgrade
 
 # Latest Python
 latest=`pyenv install -l | egrep '^[[:space:]]+[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$' | tail -1 | xargs echo`
-pyenv install ${latest}
+env PYTHON_CONFIGURE_OPTS="--enable-framework CC=clang" pyenv install ${latest}
 pyenv global ${latest}
 pyenv shell ${latest}
 pip install -r python/requirements.txt --upgrade
