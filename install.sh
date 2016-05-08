@@ -16,21 +16,26 @@ fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Powerlevel 9000 theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel9k
 
 # Powerline fonts
-mkdir -p ~/.fonts
-git clone https://github.com/powerline/fonts ~/.fonts/powerline-fonts/
-~/.fonts/powerline-fonts/install.sh
+mkdir -p ${HOME}/.fonts
+git clone https://github.com/powerline/fonts ${HOME}/.fonts/powerline-fonts/
+${HOME}/.fonts/powerline-fonts/install.sh
 
 # Awesome Powerline fonts
-git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ~/.fonts/awesome-terminal-fonts
-~/.fonts/awesome-terminal-fonts/install.sh
+git clone https://github.com/gabrielelana/awesome-terminal-fonts.git ${HOME}/.fonts/awesome-terminal-fonts
+${HOME}/.fonts/awesome-terminal-fonts/install.sh
 
 # Source updated files
 [ -e "${HOME}/.zshenv" ] && source "${HOME}/.zshenv"
 [ -e "${HOME}/.zprofile" ] && source "${HOME}/.zprofile"
 [ -e "${HOME}/.zshrc" ] && source "${HOME}/.zshrc"
+
+# Alias vim settings to nvim settings
+mkdir -p ${HOME}/.config
+ln -s ${HOME}/.vim ${HOME}/.config/nvim
+ln -s ${HOME}/.vimrc ${HOME}/.config/nvim/init.vim
 
 # Latest Ruby
 latest=`rbenv install -l | egrep '^[[:space:]]+[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$' | tail -1 | xargs echo`

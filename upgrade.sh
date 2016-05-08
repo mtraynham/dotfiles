@@ -12,6 +12,7 @@ if [ "$(uname)" == "Darwin" ]; then
     brew upgrade
     brew cleanup
     brew cask cleanup
+    brew prune
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     cp -rs ${dir}/config.ubuntu/* $HOME/
     ${dir}/install.ubuntu.sh
