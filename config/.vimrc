@@ -3,6 +3,7 @@
 " ==============================
 set encoding=utf-8
 scriptencoding utf-8
+let g:python_host_prog=$HOME . '/.pyenv/shims/python'
 
 set nocompatible               " Be iMproved
 set autoread                   " Auto reload if file saved externally
@@ -29,7 +30,7 @@ if has('autocmd')
 endif
 
 set encoding=utf-8
-set term=xterm-256color
+" set term=xterm-256color
 set t_ut=                      " Disable backgroun color erase, play nicely with tmux
 set termencoding=utf-8
 " set listchars=tab:│\,trail:•,extends:❯,precedes:❮
@@ -195,7 +196,7 @@ Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
   Plug 'honza/vim-snippets'
   Plug 'anvaka/snip5'
-  let g:ycm_server_python_interpreter='/usr/local/bin/python'
+  let g:ycm_server_python_interpreter=$HOME . '/.pyenv/shims/python'
   let g:ycm_complete_in_comments_and_strings=1
   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
   let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']

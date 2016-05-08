@@ -13,6 +13,8 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:cpick/hub
 # Gradle PPA
 sudo add-apt-repository ppa:cwchien/gradle
+# Neovim PPA
+sudo add-apt-repository ppa:neovim-ppa/unstable
 # Spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -35,6 +37,7 @@ sudo apt-get --yes --force-yes install git
 sudo apt-get --yes --force-yes install tig
 sudo apt-get --yes --force-yes install hub
 sudo apt-get --yes --force-yes install vim
+sudo apt-get --yes --force-yes install neovim
 sudo apt-get --yes --force-yes install oracle-java8-installer
 sudo apt-get --yes --force-yes install oracle-java8-set-default
 sudo apt-get --yes --force-yes install maven

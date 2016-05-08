@@ -2,6 +2,7 @@ awscli
 ipython[all]
 jupyter
 matplotlib
+neovim
 numpy
 pandas
 pip

@@ -6,6 +6,7 @@ xcode-select --install
 # HomeBrew and Casks
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/science
+brew tap neovim/neovim
 brew tap caskroom/cask
 brew tap caskroom/versions
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -20,6 +21,7 @@ brew install git-extras
 brew install tig
 brew install hub
 brew install macvim
+brew install neovim
 brew cask install java
 brew install maven
 brew install gradle

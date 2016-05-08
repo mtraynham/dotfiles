@@ -1,5 +1,5 @@
-# Use MacVim instead of Vim
-alias vim='mvim -v'
+# Use NeoVim instead of Vim
+alias vim='nvim'
 # Use brew svn
 alias svn='/usr/local/bin/svn'
 # Use brew git
