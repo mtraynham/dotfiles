@@ -7,3 +7,5 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 # Remove all SVN un-versioned files
 alias svn-clean='svn status --no-ignore | grep "^[I?]" | cut -c 9- | while IFS= read -r f; do rm -rf "$f"; done'
+# Pip upgrade all
+alias pip-upgrade='pip freeze --local | grep -v "^\-e" | cut -d = -f 1  | xargs -n1 pip install -U'

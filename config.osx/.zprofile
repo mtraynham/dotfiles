@@ -38,3 +38,6 @@ export PATH=$PATH:/usr/local/sbin
 
 # Source aliases
 source $HOME/.aliases
+
+# Source functions
+source $HOME/.functions.sh
