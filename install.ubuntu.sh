@@ -96,7 +96,9 @@ else
 fi
 
 # Git-Extras
-if [ ! -d "$HOME/.nvm" ]; then
+if [ ! -d "$HOME/.git-extras" ]; then
     git clone https://github.com/tj/git-extras.git $HOME/.git-extras
+else
+    cd $HOME/.git-extras && git pull
 fi
 cd $HOME/.git-extras && sudo make install
