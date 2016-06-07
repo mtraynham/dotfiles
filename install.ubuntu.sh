@@ -11,6 +11,8 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo add-apt-repository ppa:git-core/ppa
 # Hub PPA
 sudo add-apt-repository ppa:cpick/hub
+# Maven3 PPA
+sudo add-apt-repository ppa:andrei-pozolotin/maven3
 # Gradle PPA
 sudo add-apt-repository ppa:cwchien/gradle
 # Neovim PPA
@@ -40,7 +42,7 @@ sudo apt-get --yes --force-yes install vim
 sudo apt-get --yes --force-yes install neovim
 sudo apt-get --yes --force-yes install oracle-java8-installer
 sudo apt-get --yes --force-yes install oracle-java8-set-default
-sudo apt-get --yes --force-yes install maven
+sudo apt-get --yes --force-yes install maven3
 sudo apt-get --yes --force-yes install gradle
 sudo apt-get --yes --force-yes install irssi
 sudo apt-get --yes --force-yes install wget
