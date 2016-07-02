@@ -4,6 +4,9 @@
 # HomeBrew Cask Options
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# Docker
+eval $(docker-machine env default)
+
 # Pyenv
 export PYENV_ROOT=$HOME/.pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
