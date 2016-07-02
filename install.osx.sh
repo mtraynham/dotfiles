@@ -58,6 +58,13 @@ brew cask install cyberduck
 brew cask install vlc
 brew cask install the-unarchiver
 
+# Docker
+brew cask install virtualbox
+brew install docker
+brew install docker-compose
+brew install docker-machine
+docker-machine create --driver virtualbox default
+
 # For fun R/Hive/Pig/Spark
 brew install gcc
 brew install r

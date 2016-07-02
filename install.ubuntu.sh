@@ -23,6 +23,13 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 # Dropbox
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 sudo add-apt-repository "deb http://linux.dropbox.com/ubuntu $(lsb_release -sc) main"
+# Docker
+if [ ! -e /usr/lib/apt/methods/https ]; then
+	sudo apt-get update
+	sudo apt-get install -y apt-transport-https
+fi
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+echo deb https://get.docker.com/ubuntu docker main | sudo tee /etc/apt/sources.list.d/docker.list
 
 sudo apt-get update
 
@@ -58,6 +65,10 @@ sudo apt-get --yes --force-yes install spotify-client-0.9.17
 sudo apt-get --yes --force-yes install nautilus-dropbox
 sudo apt-get --yes --force-yes install filezilla
 sudo apt-get --yes --force-yes install tmpreaper
+# Docker
+sudo apt-get --yes --force-yes install linux-image-extra-$(uname -r)
+sudo apt-get --yes --force-yes install apparmor
+sudo apt-get --yes --force-yes install docker-engine
 
 sudo apt-get update
 sudo apt-get upgrade
