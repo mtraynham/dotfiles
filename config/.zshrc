@@ -52,7 +52,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower bundler cp gem git git-extras grunt gulp history knife mvn node npm nvm pip pyenv python rake rbenv ruby sublime svn thefuck virtualenv)
+plugins=(bower bundler cp docker docker-compose gem git git-extras grunt gulp history knife mvn node npm nvm pip pyenv python rake rbenv ruby sublime svn thefuck virtualenv)
 
 # User configuration
 

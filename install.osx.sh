@@ -61,7 +61,6 @@ brew cask install the-unarchiver
 # Docker
 brew cask install virtualbox
 brew install docker
-brew install docker-compose
 brew install docker-machine
 docker-machine create --driver virtualbox default
 brew services start docker-machine # starts docker default machine up on restart

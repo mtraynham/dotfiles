@@ -1,2 +1,8 @@
 [core]
 	editor = vim
+	autocrlf = input
+[alias]
+[pull]
+	rebase = true
+[diff]
+	compactionHeuristic = true
