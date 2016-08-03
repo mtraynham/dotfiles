@@ -12,6 +12,7 @@ export PYENV_ROOT=$HOME/.pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Rbenv
+export RBENV_ROOT=$HOME/.rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Spark
