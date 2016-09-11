@@ -8,11 +8,7 @@ git pull
 cp -rs ${dir}/config/* $HOME/
 if [ "$(uname)" == "Darwin" ]; then
     cp -rs ${dir}/config.osx/* $HOME/
-    brew update
-    brew upgrade
-    brew cleanup
-    brew cask cleanup
-    brew prune
+    brew-upgrade
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     cp -rs ${dir}/config.ubuntu/* $HOME/
     ${dir}/install.ubuntu.sh
@@ -20,6 +16,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     sudo apt-get upgrade
     sudo apt-get autoremove
 fi
+
+# Upgrade Python dependencies
+pip-upgrade
 
 # Upgrade oh-my-zsh
 upgrade_oh_my_zsh
