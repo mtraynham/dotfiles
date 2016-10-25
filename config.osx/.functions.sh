@@ -30,3 +30,10 @@ function brew-upgrade {
     (set -x; brew prune;)
     (set -x; brew cask cleanup;)
 }
+
+function upgrade-all {
+    pushd ~/Documents && brew-upgrade && popd;
+    pip-upgrade;
+    vim +PlugUpdate +qall;
+    pushd ~/.vim/plugged/YouCompleteMe && ./install.py && popd;
+}

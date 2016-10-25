@@ -26,3 +26,6 @@ eval "$(thefuck --alias)"
 
 # Source aliases
 source $HOME/.aliases
+
+# Source functions
+source $HOME/.functions.sh

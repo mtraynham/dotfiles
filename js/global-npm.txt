@@ -1,7 +1,12 @@
+babel-cli
 bower
+devtool
 eslint
 eslint-config-airbnb
+eslint-config-airbnb-base
 eslint-config-google
+eslint-plugin-import
+eslint-plugin-jsx-a11y
 eslint-plugin-react
 grunt-cli
 gulp
@@ -12,3 +17,4 @@ npm
 npm-check-updates
 tslint
 typescript
+yarn
