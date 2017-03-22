@@ -31,9 +31,26 @@ function brew-upgrade {
     (set -x; brew cask cleanup;)
 }
 
+function node-upgrade {
+    versions=`nvm ls-remote`
+    installed=`echo $versions | egrep -- "->" | tail -n 1 | egrep -o 'v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+'`
+    latest=`echo $versions | tail -n 1 | egrep -o 'v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+'`
+    if [ $installed == $latest ]; then
+        echo 'Node versions match, skipping node upgrade'
+    else
+        echo "Node versions do not match, upgrading to $latest..."
+        nvm install $latest
+        nvm alias default $latest
+        nvm use $latest
+        nvm copy-packages $installed
+        nvm uninstall $installed
+    fi
+    npm update -g
+}
+
 function upgrade-all {
-    pushd ~/Documents && brew-upgrade && popd;
+    (cd ~/Documents && brew-upgrade);
     pip-upgrade;
-    vim +PlugUpdate +qall;
-    pushd ~/.vim/plugged/YouCompleteMe && ./install.py && popd;
+    node-upgrade;
+    vim +PlugUpdate +qall && (cd ~/.vim/plugged/YouCompleteMe && ./install.py);
 }
