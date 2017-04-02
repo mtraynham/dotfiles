@@ -9,7 +9,11 @@ brew tap homebrew/science
 brew tap neovim/neovim
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap caskroom/fonts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Fonts
+brew cask install font-sourcecodepro-nerd-font
 
 # A good set of terminal tools
 brew install zsh

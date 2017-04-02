@@ -100,3 +100,8 @@ fi
 if [ ! -d "$HOME/.git-extras" ]; then
     git clone https://github.com/tj/git-extras.git $HOME/.git-extras
 fi
+
+# Powerline fonts
+mkdir -p ${HOME}/.fonts
+git clone https://github.com/powerline/fonts ${HOME}/.fonts/powerline-fonts/
+${HOME}/.fonts/powerline-fonts/install.sh
