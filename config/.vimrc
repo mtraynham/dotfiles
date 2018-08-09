@@ -1,12 +1,10 @@
 " ==============================
 " Sensible vim settings
 " ==============================
-set encoding=utf-8
-scriptencoding utf-8
-let g:python_host_prog=$HOME . '/.pyenv/shims/python'
-
 set nocompatible               " Be iMproved
 set autoread                   " Auto reload if file saved externally
+let g:python_host_prog=$HOME . '/.pyenv/shims/python'
+set guicursor=
 
 set backspace=indent,eol,start
 
@@ -31,7 +29,7 @@ endif
 
 set encoding=utf-8
 " set term=xterm-256color
-set t_ut=                      " Disable backgroun color erase, play nicely with tmux
+set t_ut=256                   " Disable backgroun color erase, play nicely with tmux
 set termencoding=utf-8
 " set listchars=tab:│\,trail:•,extends:❯,precedes:❮
 set listchars=tab:│\·,trail:·,eol:¶,precedes:<,extends:>
@@ -189,8 +187,6 @@ Plug 'tpope/vim-repeat'
 Plug 'scrooloose/syntastic'
   let g:syntastic_mode_map = {'mode': 'active','active_filetypes': ['js'], 'passive_filetypes': ['html'] }
   let g:syntastic_javascript_checkers = ['jshint']
-  let g:syntastic_jsx_checkers = ['jsxhint']
-  let g:syntastic_jsx_jsxhint_args = ['--babel']
 
 Plug 'SirVer/ultisnips'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
@@ -220,11 +216,11 @@ Plug 'Shougo/unite.vim'
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
   catch
   endtry
+  " search a file in the filetree
   nnoremap [unite]<space> :<C-u>Unite -start-insert file_rec/async<cr>
-  nnoremap [unite]r <Plug>(unite_restart)
-  nmap <leader>/ :Ag <c-r>=expand("<cword>")<cr><cr>
   nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
+  nnoremap [unite]/ :Ag <c-r>=expand("<cword>")<cr><cr>
 
 " Javascript goodies
 Plug 'maksimr/vim-jsbeautify', {'for': ['javascript', 'html', 'css']}
@@ -244,8 +240,6 @@ Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
   let g:tern_show_argument_hints = 'on_hold'
   set completeopt-=preview
   autocmd FileType javascript map <buffer> gd :TernDef<CR>
-
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-function'
@@ -268,7 +262,7 @@ endif
 
 " Now that we have plugins loaded, initialize their settings:
 try
-  let g:solarized_termcolors=16
+  let g:solarized_termcolors=256
   let g:solarized_termtrans=1
   set background=dark
   colorscheme solarized

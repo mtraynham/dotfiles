@@ -38,27 +38,22 @@ brew install wget
 brew install fontconfig
 brew install fortune
 brew install cowsay
-brew install scala
 
 # Nice apps for Dev
 brew cask install flux
 brew cask install caffeine
 brew cask install sublime-text3
 brew cask install iterm2
-# brew cask install intellij-idea
-brew cask install intellij-idea-eap
 brew cask install google-chrome
 brew cask install firefox
 brew cask install atom
 brew cask install slack
 brew cask install spotify
-brew cask install little-snitch
 brew cask install istat-menus
 brew cask install adium
 brew cask install alfred
 brew cask install dropbox
 brew cask install openoffice
-brew cask install cyberduck
 brew cask install vlc
 brew cask install the-unarchiver
 

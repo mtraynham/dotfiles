@@ -1,5 +1,3 @@
-# Pastebin upload
-alias pb='curl --data-binary @- http://telepathy/pb'
 # Use NeoVim instead of Vim
 alias vim='nvim'
 # Copy to clipboard

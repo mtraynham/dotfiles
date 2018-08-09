@@ -61,9 +61,7 @@ sudo apt-get --yes --force-yes install sublime-text-installer
 sudo apt-get --yes --force-yes install terminator
 sudo apt-get --yes --force-yes install google-chrome-stable
 sudo apt-get --yes --force-yes install firefox
-sudo apt-get --yes --force-yes install conky
-sudo apt-get --yes --force-yes install spotify-client-0.9.17
-# sudo apt-get --yes --force-yes install spotify-client  # Broken on Mint 17.3
+sudo apt-get --yes --force-yes install spotify-client
 sudo apt-get --yes --force-yes install nautilus-dropbox
 sudo apt-get --yes --force-yes install filezilla
 sudo apt-get --yes --force-yes install tmpreaper

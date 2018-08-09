@@ -8,7 +8,7 @@
     background_image = None
     use_system_font = False
     foreground_color = "#acbbbd"
-    font = Source Code Pro for Powerline Medium 9
+    font = Source Code Pro for Powerline 9
     background_color = "#002b36"
     scrollback_infinite = True
 [layouts]

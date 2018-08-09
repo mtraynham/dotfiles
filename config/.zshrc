@@ -1,17 +1,17 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(background_jobs dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_STATUS_VERBOSE=false
+POWERLEVEL9K_TIME_FORMAT="%D{%I:%M:%S %p}"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -52,7 +52,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bower bundler cp docker docker-compose gem git git-extras grunt gulp history knife mvn node npm nvm pip pyenv python rake rbenv ruby sublime svn thefuck virtualenv)
+plugins=(bundler cp docker docker-compose gem git git-extras grunt gulp history knife mvn node npm nvm pip pyenv python rake rbenv ruby sublime svn thefuck virtualenv)
 
 # User configuration
 
