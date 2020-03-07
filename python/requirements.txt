@@ -1,14 +1,7 @@
 awscli
-docker-compose
-ipython[all]
-jupyter
-matplotlib
 neovim
-numpy
-pandas
 pip
 requests
-scipy
 setuptools
 thefuck
 virtualenv

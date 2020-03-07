@@ -14,12 +14,12 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Fonts
 brew cask install font-sourcecodepro-nerd-font
+brew cask install font-hasklig-nerd-font
 
 # A good set of terminal tools
 brew install zsh
 chsh -s `which zsh`
 brew install copy-ssh-id
-brew install subversion
 brew install git
 brew install git-extras
 brew install tig
@@ -46,11 +46,8 @@ brew cask install sublime-text3
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install firefox
-brew cask install atom
 brew cask install slack
-brew cask install spotify
 brew cask install istat-menus
-brew cask install adium
 brew cask install alfred
 brew cask install dropbox
 brew cask install openoffice
@@ -58,16 +55,11 @@ brew cask install vlc
 brew cask install the-unarchiver
 
 # Docker
-brew cask install virtualbox
-brew install docker
-brew install docker-machine
-brew install docker-swarm
-docker-machine create --driver virtualbox default
-brew services start docker-machine # starts docker default machine up on restart
+brew cask install docker
 
 # For fun R/Hive/Pig/Spark
-brew install gcc
-brew install r
-brew install hive
-brew install pig
-brew install apache-spark
+#brew install gcc
+#brew install r
+#brew install hive
+#brew install pig
+#brew install apache-spark

@@ -15,8 +15,8 @@ fi
 # Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Powerlevel 9000 theme
-git clone https://github.com/bhilburn/powerlevel9k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel9k
+# Powerlevel 10K theme
+git clone https://github.com/romkatv/powerlevel10k.git ${HOME}/.oh-my-zsh/custom/themes/powerlevel10k
 
 # Source updated files
 [ -e "${HOME}/.zshenv" ] && source "${HOME}/.zshenv"
@@ -33,12 +33,6 @@ latest=`rbenv install -l | egrep '^[[:space:]]+[[:digit:]]+\.[[:digit:]]+\.[[:di
 rbenv install ${latest}
 rbenv global ${latest}
 gem install bundler
-
-# Python 2.X
-two_latest=`pyenv install -l | egrep '^[[:space:]]+2\.[[:digit:]]+\.[[:digit:]]+$' | tail -1 | xargs echo`
-env PYTHON_CONFIGURE_OPTS="--enable-framework CC=clang" pyenv install ${two_latest}
-pyenv shell ${two_latest}
-pip install -r python/requirements.txt --upgrade
 
 # Latest Python
 latest=`pyenv install -l | egrep '^[[:space:]]+[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$' | tail -1 | xargs echo`
